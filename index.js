@@ -8,6 +8,8 @@ async function main() {
   await junit.parse();
   junit.dropPrefixPath(root+'/');
 
+  console.log(junit.stats);
+  
   const conclusion = (junit.stats.failures <= 0) ? 'success' : 'failure';
   const summary = makeSummary(junit);
   const annotations = makeAnnotations(junit);
