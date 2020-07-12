@@ -48,7 +48,14 @@ class JUnit {
   parseCase(_case) {
     let failures = [];
     const stats = this.parseStats(_case.$);
+    for(const fail of _case.failure) {
+      failures.push(this.parseFailure(fail));
+    }
     return { failures, stats };
+  }
+
+  parseFailure(fail) {
+    return fail;
   }
 }
 
