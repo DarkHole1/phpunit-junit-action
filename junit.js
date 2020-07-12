@@ -10,7 +10,8 @@ class JUnit {
     const parser = new xml.Parser();
     const json = await parser.parseStringPromise(this.data);
     const { suites, stats } = this.parseRootSuite(json.testsuites.testsuite[0]);
-    console.log(suites[24].cases[1]);
+    this.suites = suites;
+    this.stats = stats;
   }
 
   parseStats(stats) {
