@@ -10,12 +10,12 @@ class JUnit {
     const parser = new xml.Parser();
     const json = await parser.parseStringPromise(this.data);
     const { suites, stats } = this.parseRootSuite(json.testsuites.testsuite[0]);
-    console.log(suites);
+    console.log(suites[24].cases);
   }
 
   parseStats(stats) {
-    const STRING_FIELDS = ['name', 'file'];
-    const NUMBER_FIELDS = ['tests', 'assertions', 'errors', 'warnings', 'failures', 'skipped', 'time'];
+    const STRING_FIELDS = ['name', 'file', 'classname'];
+    const NUMBER_FIELDS = ['tests', 'assertions', 'errors', 'warnings', 'failures', 'skipped', 'time', 'line'];
     const res = {};
     for(const field of STRING_FIELDS) {
       if(field in stats) res[field] = stats[field];
@@ -39,14 +39,16 @@ class JUnit {
   parseSuite(suite) {
     let cases = [];
     const stats = this.parseStats(suite.$);
-    for(const _case of suite.testcases) {
+    for(const _case of suite.testcase) {
       cases.push(this.parseCase(_case));
     }
     return { cases, stats };
   }
 
   parseCase(_case) {
-    return _case;
+    let failures = [];
+    const stats = this.parseStats(_case.$);
+    return { failures, stats };
   }
 }
 
