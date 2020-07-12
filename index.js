@@ -63,7 +63,7 @@ async function sendCheck(name, title, conclusion, summary, annotations) {
   const octokit = github.getOctokit(token);
   const baseData = {
     ...github.context.repo,
-    head_sha: github.context.sha,
+    head_sha: getHeadSha(),
   };
 
   let res = await octokit.checks.create({
