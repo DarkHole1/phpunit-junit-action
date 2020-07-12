@@ -63,6 +63,24 @@ class JUnit {
   parseFailure(fail) {
     return { type: fail.$.type, message: fail._ };
   }
+
+  getFailed() {
+    if(this.stats.failures <= 0) return [];
+
+    let res = [];
+
+    for(const suite of this.suites) {
+      if(suite.stats.failures <= 0) continue;
+      let cases = [];
+      for(const _case of suite.cases) {
+        if(!_case.stats.failed) continue;
+        cases.push(_case);
+      }
+      res.push({ stats: suite.stats, cases });
+    }
+
+    return res;
+  }
 }
 
 module.exports = JUnit;
