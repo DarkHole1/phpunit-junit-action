@@ -58,23 +58,26 @@ function makeAnnotations(junit) {
 function sendCheck(name, title, conclusion, summary, annotations) {
   const token = core.getInput('access-token');
   const octokit = github.getOctokit(token);
-  octokit.checks.create({
+  const baseData = {
     ...github.context.repo,
     head_sha: github.context.sha,
-    name: 'PHPUnit',
-    conclusion: 'success',
-    output: {
-      title: 'PHPUnit tests',
-      summary: 'Hello',
-      annotations: [{
-        path: 'index.js',
-        start_line: 1,
-        end_line: 1,
-        annotation_level: 'notice',
-        message: 'Hello world'
-      }]
-    }
+  };
+
+  octokit.checks.create({
+    ...baseData,
+    name: name,
+    conclusion: conclusion,
+    output: { title, summary, annotations: annotations.slice(0, 50) }
   });
+
+  let batchAnnotations = annotations.slice(50);
+  while(batchAnnotations.length >= 0) {
+    octokit.checks.update({
+      ...baseData,
+      output: { annotations: batchAnnotations.slice(0, 50) }
+    });
+    batchAnnotations = batchAnnotations.slice(50); 
+  }
 }
 
 main().catch(e => core.setFailed(error.message));
