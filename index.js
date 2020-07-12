@@ -1,3 +1,4 @@
+console.log(require('process'));
 const root = require('process').cwd();
 const core = require('@actions/core');
 const github = require('@actions/github');
