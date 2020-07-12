@@ -76,8 +76,8 @@ function sendCheck(name, title, conclusion, summary, annotations) {
       ...baseData,
       output: { annotations: batchAnnotations.slice(0, 50) }
     });
-    batchAnnotations = batchAnnotations.slice(50); 
+    batchAnnotations = batchAnnotations.slice(50);
   }
 }
 
-main().catch(e => core.setFailed(error.message));
+main().catch(e => core.setFailed(e.message));
