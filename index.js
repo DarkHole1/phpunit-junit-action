@@ -66,7 +66,7 @@ function sendCheck(name, title, conclusion, summary, annotations) {
     head_sha: github.context.sha,
   };
 
-  octokit.checks.create({
+  await octokit.checks.create({
     ...baseData,
     name: name,
     conclusion: conclusion,
@@ -75,7 +75,7 @@ function sendCheck(name, title, conclusion, summary, annotations) {
 
   let batchAnnotations = annotations.slice(50);
   while(batchAnnotations.length > 0) {
-    octokit.checks.update({
+    await octokit.checks.update({
       ...baseData,
       output: { annotations: batchAnnotations.slice(0, 50) }
     });
