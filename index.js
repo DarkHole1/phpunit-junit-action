@@ -66,19 +66,22 @@ async function sendCheck(name, title, conclusion, summary, annotations) {
     head_sha: github.context.sha,
   };
 
-  await octokit.checks.create({
+  let res = await octokit.checks.create({
     ...baseData,
     name: name,
     conclusion: conclusion,
     output: { title, summary, annotations: annotations.slice(0, 50) }
   });
 
+  console.log(res);
+
   let batchAnnotations = annotations.slice(50);
   while(batchAnnotations.length > 0) {
-    await octokit.checks.update({
+    let res = await octokit.checks.update({
       ...baseData,
       output: { annotations: batchAnnotations.slice(0, 50) }
     });
+    console.log(res);
     batchAnnotations = batchAnnotations.slice(50);
   }
 }
