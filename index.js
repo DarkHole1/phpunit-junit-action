@@ -22,7 +22,15 @@ async function main() {
 }
 
 function makeSummary(junit) {
-  return '';
+  const stats = junit.stats;
+  return (
+    `Total tests: ${stats.tests}\n` +
+    `Errors: ${stats.errors}\n` +
+    `Warnings: ${stats.warnings}\n` +
+    `Failures: ${stats.failures}\n` +
+    `Skipped: ${stats.skipped}\n` +
+    `Time: ${stats.time}`
+  );
 }
 
 function makeAnnotations(junit) {
