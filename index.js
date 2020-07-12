@@ -2,14 +2,25 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
-  // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet');
-  console.log(`Hello ${nameToGreet}!`);
-  const time = (new Date()).toTimeString();
-  core.setOutput("time", time);
-  // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
+  const token = core.getInput('access-token');
+  const octokit = github.GitHub(token);
+  octokit.check.create(
+    ...github.context.repo,
+    head_sha: github.context.sha,
+    name: 'Test check',
+    conclusion: 'success',
+    output: {
+      title: 'Test',
+      summary: 'Hello',
+      annotations: [{
+        path: 'index.js',
+        start_line: 1,
+        end_line: 1,
+        annotation_level: 'notice',
+        message: 'Hello world'
+      }]
+    }
+  );
 } catch (error) {
   core.setFailed(error.message);
 }
