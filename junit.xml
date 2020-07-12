@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="phptests" tests="111" assertions="176" errors="0" warnings="1" failures="0" skipped="0" time="0.133720">
+    <testsuite name="AuthUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/AuthUserTest.php" tests="5" assertions="11" errors="0" warnings="0" failures="0" skipped="0" time="0.069302">
+      <testcase name="basic" class="AuthUserTest" classname="AuthUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/AuthUserTest.php" line="11" assertions="1" time="0.034263"/>
+      <testcase name="toJsonString_fromSessionCache" class="AuthUserTest" classname="AuthUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/AuthUserTest.php" line="17" assertions="2" time="0.000447"/>
+      <testcase name="toJsonString_requireInfo" class="AuthUserTest" classname="AuthUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/AuthUserTest.php" line="30" assertions="4" time="0.033392"/>
+      <testcase name="logout" class="AuthUserTest" classname="AuthUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/AuthUserTest.php" line="47" assertions="2" time="0.000430"/>
+      <testcase name="tasksProvider" class="AuthUserTest" classname="AuthUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/AuthUserTest.php" line="56" assertions="2" time="0.000770"/>
+    </testsuite>
+    <testsuite name="CSessionTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CSessionTest.php" tests="4" assertions="8" errors="0" warnings="0" failures="0" skipped="0" time="0.001752">
+      <testcase name="itemGet_returnNullIfNotActive" class="CSessionTest" classname="CSessionTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CSessionTest.php" line="7" assertions="2" time="0.000885"/>
+      <testcase name="itemGet_decodeJson" class="CSessionTest" classname="CSessionTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CSessionTest.php" line="16" assertions="2" time="0.000391"/>
+      <testcase name="itemSet_returnNullIfNotActive" class="CSessionTest" classname="CSessionTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CSessionTest.php" line="26" assertions="2" time="0.000148"/>
+      <testcase name="itemSet_encodeJson" class="CSessionTest" classname="CSessionTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CSessionTest.php" line="35" assertions="2" time="0.000328"/>
+    </testsuite>
+    <testsuite name="CuTaskTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CuTaskTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.000434">
+      <testcase name="details_decodeJson" class="CuTaskTest" classname="CuTaskTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CuTaskTest.php" line="7" assertions="1" time="0.000434"/>
+    </testsuite>
+    <testsuite name="CuTasksTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CuTasksTest.php" tests="3" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.032131">
+      <testcase name="create_serializeTask" class="CuTasksTest" classname="CuTasksTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CuTasksTest.php" line="9" assertions="3" time="0.031094"/>
+      <testcase name="all_convertDbData" class="CuTasksTest" classname="CuTasksTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CuTasksTest.php" line="21" assertions="1" time="0.000766"/>
+      <testcase name="get_null" class="CuTasksTest" classname="CuTasksTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/CuTasksTest.php" line="40" assertions="2" time="0.000271"/>
+    </testsuite>
+    <testsuite name="EmptyUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/EmptyUserTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.000267">
+      <testcase name="basic" class="EmptyUserTest" classname="EmptyUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/EmptyUserTest.php" line="7" assertions="2" time="0.000267"/>
+    </testsuite>
+    <testsuite name="UsersRepositoryTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/UsersRepositoryTest.php" tests="5" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.001699">
+      <testcase name="loginFailed" class="UsersRepositoryTest" classname="UsersRepositoryTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/UsersRepositoryTest.php" line="10" assertions="1" time="0.000697"/>
+      <testcase name="loginSuccess" class="UsersRepositoryTest" classname="UsersRepositoryTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/UsersRepositoryTest.php" line="21" assertions="1" time="0.000473"/>
+      <testcase name="setupSessionOnLogin" class="UsersRepositoryTest" classname="UsersRepositoryTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/UsersRepositoryTest.php" line="32" assertions="1" time="0.000117"/>
+      <testcase name="getEmptyCurrentUser" class="UsersRepositoryTest" classname="UsersRepositoryTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/UsersRepositoryTest.php" line="44" assertions="1" time="0.000103"/>
+      <testcase name="getCurrentUser" class="UsersRepositoryTest" classname="UsersRepositoryTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Core/UsersRepositoryTest.php" line="53" assertions="2" time="0.000309"/>
+    </testsuite>
+    <testsuite name="CdbAdapterTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbAdapterTest.php" tests="1" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.000537">
+      <testcase name="queryCollectStats" class="CdbAdapterTest" classname="CdbAdapterTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbAdapterTest.php" line="7" assertions="2" time="0.000537"/>
+    </testsuite>
+    <testsuite name="CdbUTasks" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbTaskTest.php" tests="2" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.000472">
+      <testcase name="baseTest" class="CdbUTasks" classname="CdbUTasks" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbTaskTest.php" line="8" assertions="2" time="0.000407"/>
+      <testcase name="updateTest" class="CdbUTasks" classname="CdbUTasks" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbTaskTest.php" line="15" assertions="3" time="0.000065"/>
+    </testsuite>
+    <testsuite name="CdbUTasksTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbTasksTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000118">
+      <testcase name="create_returnID" class="CdbUTasksTest" classname="CdbUTasksTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbTasksTest.php" line="9" assertions="2" time="0.000063"/>
+      <testcase name="get_nullIfNotExist" class="CdbUTasksTest" classname="CdbUTasksTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbTasksTest.php" line="19" assertions="1" time="0.000055"/>
+    </testsuite>
+    <testsuite name="CdbUserDataTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserDataTest.php" tests="7" assertions="16" errors="0" warnings="0" failures="0" skipped="0" time="0.000550">
+      <testcase name="get_query" class="CdbUserDataTest" classname="CdbUserDataTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserDataTest.php" line="8" assertions="4" time="0.000193"/>
+      <testcase name="get_emptyObject" class="CdbUserDataTest" classname="CdbUserDataTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserDataTest.php" line="21" assertions="1" time="0.000059"/>
+      <testcase name="get_createField" class="CdbUserDataTest" classname="CdbUserDataTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserDataTest.php" line="29" assertions="1" time="0.000061"/>
+      <testcase name="get_createComplexField" class="CdbUserDataTest" classname="CdbUserDataTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserDataTest.php" line="39" assertions="1" time="0.000056"/>
+      <testcase name="get_emptyFieldByDefault" class="CdbUserDataTest" classname="CdbUserDataTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserDataTest.php" line="49" assertions="1" time="0.000054"/>
+      <testcase name="put_query" class="CdbUserDataTest" classname="CdbUserDataTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserDataTest.php" line="57" assertions="4" time="0.000062"/>
+      <testcase name="delete" class="CdbUserDataTest" classname="CdbUserDataTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserDataTest.php" line="73" assertions="4" time="0.000065"/>
+    </testsuite>
+    <testsuite name="CdbUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserTest.php" tests="4" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.000493">
+      <testcase name="UserData_get" class="CdbUserTest" classname="CdbUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserTest.php" line="8" assertions="1" time="0.000147"/>
+      <testcase name="UserData_put" class="CdbUserTest" classname="CdbUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserTest.php" line="17" assertions="1" time="0.000145"/>
+      <testcase name="UserData_delete" class="CdbUserTest" classname="CdbUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserTest.php" line="26" assertions="1" time="0.000143"/>
+      <testcase name="tasks_userID" class="CdbUserTest" classname="CdbUserTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUserTest.php" line="35" assertions="1" time="0.000058"/>
+    </testsuite>
+    <testsuite name="CdbUsersTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUsersTest.php" tests="5" assertions="12" errors="0" warnings="0" failures="0" skipped="0" time="0.000287">
+      <testcase name="basicSuccessLogin" class="CdbUsersTest" classname="CdbUsersTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUsersTest.php" line="8" assertions="2" time="0.000061"/>
+      <testcase name="login_query" class="CdbUsersTest" classname="CdbUsersTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUsersTest.php" line="19" assertions="4" time="0.000059"/>
+      <testcase name="nullIfNotFounded" class="CdbUsersTest" classname="CdbUsersTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUsersTest.php" line="32" assertions="1" time="0.000054"/>
+      <testcase name="byID" class="CdbUsersTest" classname="CdbUsersTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUsersTest.php" line="39" assertions="2" time="0.000056"/>
+      <testcase name="byID_query" class="CdbUsersTest" classname="CdbUsersTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Database/CdbUsersTest.php" line="50" assertions="3" time="0.000057"/>
+    </testsuite>
+    <testsuite name="CmrArrayTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Globals/CmrArrayTest.php" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.000227">
+      <testcase name="accessToKeyValue" class="CmrArrayTest" classname="CmrArrayTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Globals/CmrArrayTest.php" line="7" assertions="1" time="0.000170"/>
+      <testcase name="accessToUndefinedKey" class="CmrArrayTest" classname="CmrArrayTest" file="/home/darkhole/Projects/actions_sandbox/phptests/Globals/CmrArrayTest.php" line="13" assertions="1" time="0.000057"/>
+    </testsuite>
+    <testsuite name="FakeDB_Test" file="/home/darkhole/Projects/actions_sandbox/phptests/Mocks/FakeDB_Test.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000110">
+      <testcase name="queryReturnNull" class="FakeDB_Test" classname="FakeDB_Test" file="/home/darkhole/Projects/actions_sandbox/phptests/Mocks/FakeDB_Test.php" line="7" assertions="1" time="0.000056"/>
+      <testcase name="queryReturnStats" class="FakeDB_Test" classname="FakeDB_Test" file="/home/darkhole/Projects/actions_sandbox/phptests/Mocks/FakeDB_Test.php" line="13" assertions="2" time="0.000054"/>
+    </testsuite>
+    <testsuite name="SecurityPolicyTest" file="/home/darkhole/Projects/actions_sandbox/phptests/SecurityPolicyTest.php" tests="3" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.000430">
+      <testcase name="alwaysSame" class="SecurityPolicyTest" classname="SecurityPolicyTest" file="/home/darkhole/Projects/actions_sandbox/phptests/SecurityPolicyTest.php" line="7" assertions="1" time="0.000165"/>
+      <testcase name="different" class="SecurityPolicyTest" classname="SecurityPolicyTest" file="/home/darkhole/Projects/actions_sandbox/phptests/SecurityPolicyTest.php" line="15" assertions="1" time="0.000208"/>
+      <testcase name="exactHash" class="SecurityPolicyTest" classname="SecurityPolicyTest" file="/home/darkhole/Projects/actions_sandbox/phptests/SecurityPolicyTest.php" line="23" assertions="2" time="0.000057"/>
+    </testsuite>
+    <testsuite name="CtfCommonTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Common/CtfCommonTest.php" tests="3" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.000334">
+      <testcase name="fullyValid" class="CtfCommonTest" classname="CtfCommonTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Common/CtfCommonTest.php" line="19" assertions="1" time="0.000220"/>
+      <testcase name="dateMustBeSet" class="CtfCommonTest" classname="CtfCommonTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Common/CtfCommonTest.php" line="25" assertions="2" time="0.000059"/>
+      <testcase name="dateOnlyInDDMMYYYY" class="CtfCommonTest" classname="CtfCommonTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Common/CtfCommonTest.php" line="35" assertions="1" time="0.000055"/>
+    </testsuite>
+    <testsuite name="UserTasks_Instagram_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CCropsTest.php" tests="6" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.017503">
+      <testcase name="implements_IUserTask" class="UserTasks_Instagram_CCropsTest" classname="UserTasks_Instagram_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CCropsTest.php" line="27" assertions="1" time="0.017183"/>
+      <testcase name="toJson_basic" class="UserTasks_Instagram_CCropsTest" classname="UserTasks_Instagram_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CCropsTest.php" line="33" assertions="1" time="0.000074"/>
+      <testcase name="isValid_valid" class="UserTasks_Instagram_CCropsTest" classname="UserTasks_Instagram_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CCropsTest.php" line="39" assertions="1" time="0.000062"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_Instagram_CCropsTest" classname="UserTasks_Instagram_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CCropsTest.php" line="45" assertions="3" time="0.000063"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_Instagram_CCropsTest" classname="UserTasks_Instagram_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CCropsTest.php" line="53" assertions="1" time="0.000059"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_Instagram_CCropsTest" classname="UserTasks_Instagram_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CCropsTest.php" line="59" assertions="2" time="0.000062"/>
+    </testsuite>
+    <testsuite name="UserTasks_Instagram_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CTargetingTest.php" tests="6" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.000477">
+      <testcase name="implements_IUserTask" class="UserTasks_Instagram_CTargetingTest" classname="UserTasks_Instagram_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CTargetingTest.php" line="27" assertions="1" time="0.000175"/>
+      <testcase name="toJson_basic" class="UserTasks_Instagram_CTargetingTest" classname="UserTasks_Instagram_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CTargetingTest.php" line="33" assertions="1" time="0.000063"/>
+      <testcase name="isValid_valid" class="UserTasks_Instagram_CTargetingTest" classname="UserTasks_Instagram_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CTargetingTest.php" line="39" assertions="1" time="0.000058"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_Instagram_CTargetingTest" classname="UserTasks_Instagram_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CTargetingTest.php" line="45" assertions="3" time="0.000061"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_Instagram_CTargetingTest" classname="UserTasks_Instagram_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CTargetingTest.php" line="53" assertions="1" time="0.000057"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_Instagram_CTargetingTest" classname="UserTasks_Instagram_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/Instagram/CTargetingTest.php" line="59" assertions="2" time="0.000062"/>
+    </testsuite>
+    <testsuite name="UserTasks_OK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CCropsTest.php" tests="6" assertions="8" errors="0" warnings="0" failures="0" skipped="0" time="0.000480">
+      <testcase name="implements_IUserTask" class="UserTasks_OK_CCropsTest" classname="UserTasks_OK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CCropsTest.php" line="27" assertions="1" time="0.000181"/>
+      <testcase name="toJson_basic" class="UserTasks_OK_CCropsTest" classname="UserTasks_OK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CCropsTest.php" line="33" assertions="1" time="0.000062"/>
+      <testcase name="isValid_valid" class="UserTasks_OK_CCropsTest" classname="UserTasks_OK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CCropsTest.php" line="39" assertions="1" time="0.000056"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_OK_CCropsTest" classname="UserTasks_OK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CCropsTest.php" line="45" assertions="3" time="0.000061"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_OK_CCropsTest" classname="UserTasks_OK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CCropsTest.php" line="53" assertions="1" time="0.000056"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_OK_CCropsTest" classname="UserTasks_OK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CCropsTest.php" line="59" assertions="1" time="0.000064"/>
+    </testsuite>
+    <testsuite name="UserTasks_OK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CTargetingTest.php" tests="6" assertions="8" errors="0" warnings="0" failures="0" skipped="0" time="0.000828">
+      <testcase name="implements_IUserTask" class="UserTasks_OK_CTargetingTest" classname="UserTasks_OK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CTargetingTest.php" line="27" assertions="1" time="0.000263"/>
+      <testcase name="toJson_basic" class="UserTasks_OK_CTargetingTest" classname="UserTasks_OK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CTargetingTest.php" line="33" assertions="1" time="0.000116"/>
+      <testcase name="isValid_valid" class="UserTasks_OK_CTargetingTest" classname="UserTasks_OK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CTargetingTest.php" line="39" assertions="1" time="0.000106"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_OK_CTargetingTest" classname="UserTasks_OK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CTargetingTest.php" line="45" assertions="3" time="0.000115"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_OK_CTargetingTest" classname="UserTasks_OK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CTargetingTest.php" line="53" assertions="1" time="0.000121"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_OK_CTargetingTest" classname="UserTasks_OK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/OK/CTargetingTest.php" line="59" assertions="1" time="0.000107"/>
+    </testsuite>
+    <testsuite name="UserTasks_TikTok_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CCropsTest.php" tests="6" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.000837">
+      <testcase name="implements_IUserTask" class="UserTasks_TikTok_CCropsTest" classname="UserTasks_TikTok_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CCropsTest.php" line="27" assertions="1" time="0.000275"/>
+      <testcase name="toJson_basic" class="UserTasks_TikTok_CCropsTest" classname="UserTasks_TikTok_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CCropsTest.php" line="33" assertions="1" time="0.000118"/>
+      <testcase name="isValid_valid" class="UserTasks_TikTok_CCropsTest" classname="UserTasks_TikTok_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CCropsTest.php" line="39" assertions="1" time="0.000108"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_TikTok_CCropsTest" classname="UserTasks_TikTok_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CCropsTest.php" line="45" assertions="3" time="0.000114"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_TikTok_CCropsTest" classname="UserTasks_TikTok_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CCropsTest.php" line="53" assertions="1" time="0.000107"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_TikTok_CCropsTest" classname="UserTasks_TikTok_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CCropsTest.php" line="59" assertions="2" time="0.000115"/>
+    </testsuite>
+    <testsuite name="UserTasks_TikTok_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CTargetingTest.php" tests="6" assertions="8" errors="0" warnings="0" failures="0" skipped="0" time="0.000837">
+      <testcase name="implements_IUserTask" class="UserTasks_TikTok_CTargetingTest" classname="UserTasks_TikTok_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CTargetingTest.php" line="27" assertions="1" time="0.000274"/>
+      <testcase name="toJson_basic" class="UserTasks_TikTok_CTargetingTest" classname="UserTasks_TikTok_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CTargetingTest.php" line="33" assertions="1" time="0.000126"/>
+      <testcase name="isValid_valid" class="UserTasks_TikTok_CTargetingTest" classname="UserTasks_TikTok_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CTargetingTest.php" line="39" assertions="1" time="0.000110"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_TikTok_CTargetingTest" classname="UserTasks_TikTok_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CTargetingTest.php" line="45" assertions="3" time="0.000114"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_TikTok_CTargetingTest" classname="UserTasks_TikTok_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CTargetingTest.php" line="53" assertions="1" time="0.000106"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_TikTok_CTargetingTest" classname="UserTasks_TikTok_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/TikTok/CTargetingTest.php" line="59" assertions="1" time="0.000107"/>
+    </testsuite>
+    <testsuite name="UserTasks_VK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CCropsTest.php" tests="6" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.000837">
+      <testcase name="implements_IUserTask" class="UserTasks_VK_CCropsTest" classname="UserTasks_VK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CCropsTest.php" line="27" assertions="1" time="0.000275"/>
+      <testcase name="toJson_basic" class="UserTasks_VK_CCropsTest" classname="UserTasks_VK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CCropsTest.php" line="33" assertions="1" time="0.000119"/>
+      <testcase name="isValid_valid" class="UserTasks_VK_CCropsTest" classname="UserTasks_VK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CCropsTest.php" line="39" assertions="1" time="0.000108"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_VK_CCropsTest" classname="UserTasks_VK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CCropsTest.php" line="45" assertions="3" time="0.000113"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_VK_CCropsTest" classname="UserTasks_VK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CCropsTest.php" line="53" assertions="1" time="0.000107"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_VK_CCropsTest" classname="UserTasks_VK_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CCropsTest.php" line="59" assertions="2" time="0.000115"/>
+    </testsuite>
+    <testsuite name="UserTasks_VK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CTargetingTest.php" tests="6" assertions="10" errors="0" warnings="0" failures="0" skipped="0" time="0.000862">
+      <testcase name="implements_IUserTask" class="UserTasks_VK_CTargetingTest" classname="UserTasks_VK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CTargetingTest.php" line="27" assertions="1" time="0.000271"/>
+      <testcase name="toJson_basic" class="UserTasks_VK_CTargetingTest" classname="UserTasks_VK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CTargetingTest.php" line="33" assertions="1" time="0.000120"/>
+      <testcase name="isValid_valid" class="UserTasks_VK_CTargetingTest" classname="UserTasks_VK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CTargetingTest.php" line="39" assertions="1" time="0.000110"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_VK_CTargetingTest" classname="UserTasks_VK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CTargetingTest.php" line="45" assertions="3" time="0.000115"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_VK_CTargetingTest" classname="UserTasks_VK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CTargetingTest.php" line="53" assertions="1" time="0.000108"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_VK_CTargetingTest" classname="UserTasks_VK_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/VK/CTargetingTest.php" line="59" assertions="3" time="0.000138"/>
+    </testsuite>
+    <testsuite name="UserTasks_YouTube_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CCropsTest.php" tests="6" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.000850">
+      <testcase name="implements_IUserTask" class="UserTasks_YouTube_CCropsTest" classname="UserTasks_YouTube_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CCropsTest.php" line="27" assertions="1" time="0.000278"/>
+      <testcase name="toJson_basic" class="UserTasks_YouTube_CCropsTest" classname="UserTasks_YouTube_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CCropsTest.php" line="33" assertions="1" time="0.000117"/>
+      <testcase name="isValid_valid" class="UserTasks_YouTube_CCropsTest" classname="UserTasks_YouTube_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CCropsTest.php" line="39" assertions="1" time="0.000108"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_YouTube_CCropsTest" classname="UserTasks_YouTube_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CCropsTest.php" line="45" assertions="3" time="0.000113"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_YouTube_CCropsTest" classname="UserTasks_YouTube_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CCropsTest.php" line="53" assertions="1" time="0.000116"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_YouTube_CCropsTest" classname="UserTasks_YouTube_CCropsTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CCropsTest.php" line="59" assertions="2" time="0.000118"/>
+    </testsuite>
+    <testsuite name="UserTasks_YouTube_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CTargetingTest.php" tests="6" assertions="8" errors="0" warnings="0" failures="0" skipped="0" time="0.000620">
+      <testcase name="implements_IUserTask" class="UserTasks_YouTube_CTargetingTest" classname="UserTasks_YouTube_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CTargetingTest.php" line="27" assertions="1" time="0.000241"/>
+      <testcase name="toJson_basic" class="UserTasks_YouTube_CTargetingTest" classname="UserTasks_YouTube_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CTargetingTest.php" line="33" assertions="1" time="0.000081"/>
+      <testcase name="isValid_valid" class="UserTasks_YouTube_CTargetingTest" classname="UserTasks_YouTube_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CTargetingTest.php" line="39" assertions="1" time="0.000073"/>
+      <testcase name="isValid_commonFieldsNotEmpty" class="UserTasks_YouTube_CTargetingTest" classname="UserTasks_YouTube_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CTargetingTest.php" line="45" assertions="3" time="0.000078"/>
+      <testcase name="isValid_coverageNotEmpty" class="UserTasks_YouTube_CTargetingTest" classname="UserTasks_YouTube_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CTargetingTest.php" line="53" assertions="1" time="0.000074"/>
+      <testcase name="isValid_atLeastOneCoverageFields" class="UserTasks_YouTube_CTargetingTest" classname="UserTasks_YouTube_CTargetingTest" file="/home/darkhole/Projects/actions_sandbox/phptests/UserTasks/YouTube/CTargetingTest.php" line="59" assertions="1" time="0.000073"/>
+    </testsuite>
+    <testsuite name="Trash" file="/home/darkhole/Projects/actions_sandbox/phptests/trashTest.php" tests="1" assertions="0" errors="0" warnings="1" failures="0" skipped="0" time="0.000447">
+      <testcase name="Warning" assertions="0" time="0.000447">
+        <warning type="PHPUnit\Framework\Warning">Warning
+No tests found in class "Trash".
+
+</warning>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>
