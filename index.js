@@ -70,15 +70,14 @@ function sendCheck(name, title, conclusion, summary, annotations) {
     output: { title, summary, annotations: annotations.slice(0, 50) }
   });
 
-  // let batchAnnotations = annotations.slice(50);
-  // while(batchAnnotations.length >= 0) {
-  //   octokit.checks.update({
-  //     ...baseData,
-  //     output: { annotations: batchAnnotations.slice(0, 50) }
-  //   });
-  //   batchAnnotations = batchAnnotations.slice(50);
-  // }
-  // 
+  let batchAnnotations = annotations.slice(50);
+  while(batchAnnotations.length > 0) {
+    octokit.checks.update({
+      ...baseData,
+      output: { annotations: batchAnnotations.slice(0, 50) }
+    });
+    batchAnnotations = batchAnnotations.slice(50);
+  }
 }
 
 main().catch(e => core.setFailed(e.message));
