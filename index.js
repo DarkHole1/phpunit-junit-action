@@ -4,12 +4,13 @@ const github = require('@actions/github');
 const JUnit = require('./junit');
 
 async function main() {
+  console.log('start');
   const junit = new JUnit(core.getInput('file'));
   await junit.parse();
   junit.dropPrefixPath(root+'/');
 
   console.log(junit.stats);
-  
+
   const conclusion = (junit.stats.failures <= 0) ? 'success' : 'failure';
   const summary = makeSummary(junit);
   const annotations = makeAnnotations(junit);
