@@ -81,6 +81,16 @@ class JUnit {
 
     return res;
   }
+
+  dropPrefixPath(path) {
+    for(const suite of this.suites) {
+      if(suite.stats.file.startsWith(path)) suite.stats.file = suite.stats.file.slice(path.length);
+      for(const _case of suite.cases) {
+        if(!('file' in _case.stats)) continue;
+        if(_case.stats.file.startsWith(path)) _case.stats.file = _case.stats.file.slice(path.length);
+      }
+    }
+  }
 }
 
 module.exports = JUnit;
