@@ -15,7 +15,7 @@ async function main() {
   const summary = makeSummary(junit);
   const annotations = makeAnnotations(junit);
 
-  sendCheck(
+  await sendCheck(
     'PHPUnit check',
     'PHPUnit tests',
     conclusion,
@@ -58,7 +58,7 @@ function makeAnnotations(junit) {
   return res;
 }
 
-function sendCheck(name, title, conclusion, summary, annotations) {
+async function sendCheck(name, title, conclusion, summary, annotations) {
   const token = core.getInput('access-token');
   const octokit = github.getOctokit(token);
   const baseData = {
