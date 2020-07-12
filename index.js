@@ -83,4 +83,12 @@ function sendCheck(name, title, conclusion, summary, annotations) {
   }
 }
 
+function getHeadSha() {
+  if (github.context.payload.pull_request) {
+    return github.context.payload.pull_request.head.sha;
+  }
+
+  return github.context.sha;
+}
+
 main().catch(e => core.setFailed(e.message));
