@@ -4,7 +4,7 @@ const github = require('@actions/github');
 try {
   const token = core.getInput('access-token');
   const octokit = github.GitHub(token);
-  octokit.check.create(
+  octokit.check.create({
     ...github.context.repo,
     head_sha: github.context.sha,
     name: 'Test check',
@@ -20,7 +20,7 @@ try {
         message: 'Hello world'
       }]
     }
-  );
+  });
 } catch (error) {
   core.setFailed(error.message);
 }
