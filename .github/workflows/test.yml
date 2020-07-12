@@ -8,6 +8,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: DarkHole1/phpunit-junit-action@master
+        uses: ./
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
