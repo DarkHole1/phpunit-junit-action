@@ -4,7 +4,6 @@ const github = require('@actions/github');
 try {
   const token = core.getInput('access-token');
   const octokit = github.getOctokit(token);
-  console.log(octokit);
   octokit.checks.create({
     ...github.context.repo,
     head_sha: github.context.sha,
