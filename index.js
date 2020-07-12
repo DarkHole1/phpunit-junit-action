@@ -34,7 +34,25 @@ function makeSummary(junit) {
 }
 
 function makeAnnotations(junit) {
-  return [];
+  let res = [];
+  const failed = junit.getFailed();
+
+  for(const suite of failed) {
+    for(const _case of suite.cases) {
+      for(const failure of _case.failures) {
+        res.push({
+          title: _case.stats.name,
+          annotation_level: 'failure',
+          path: _case.stats.file,
+          start_line: _case.stats.line,
+          end_line: _case.stats.line,
+          message: failure.message
+        });
+      }
+    }
+  }
+
+  return res;
 }
 
 function sendCheck(name, title, conclusion, summary, annotations) {
