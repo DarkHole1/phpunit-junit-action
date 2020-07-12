@@ -2,8 +2,12 @@ name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
   access-token:
-    description: 'Github token'
+    description: Github token
     required: true
+  file:
+    description: Path for junit file
+    required: true
+    default: junit.xml
 runs:
   using: 'node12'
   main: 'index.js'

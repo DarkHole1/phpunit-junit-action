@@ -1,16 +1,44 @@
+const root = require('process').cwd();
 const core = require('@actions/core');
 const github = require('@actions/github');
+const JUnit = require('./junit');
 
-try {
+async function main() {
+  const junit = new JUnit(core.getInput('file'));
+  await junit.parse();
+  junit.dropPrefixPath(cwd+'/');
+
+  const conclusion = (junit.stats.failures <= 0) ? 'success' : 'failure';
+  const summary = makeSummary(junit);
+  const annotations = makeAnnotations(junit);
+
+  sendCheck(
+    'PHPUnit',
+    'PHPUnit tests',
+    conclusion,
+    summary,
+    annotations
+  );
+}
+
+function makeSummary(junit) {
+  return '';
+}
+
+function makeAnnotations(junit) {
+  return [];
+}
+
+function sendCheck(name, title, conclusion, summary, annotations) {
   const token = core.getInput('access-token');
   const octokit = github.getOctokit(token);
   octokit.checks.create({
     ...github.context.repo,
     head_sha: github.context.sha,
-    name: 'Test check',
+    name: 'PHPUnit',
     conclusion: 'success',
     output: {
-      title: 'Test',
+      title: 'PHPUnit tests',
       summary: 'Hello',
       annotations: [{
         path: 'index.js',
@@ -21,6 +49,6 @@ try {
       }]
     }
   });
-} catch (error) {
-  core.setFailed(error.message);
 }
+
+main().catch(e => core.setFailed(error.message));
