@@ -13,7 +13,7 @@ async function main() {
   const annotations = makeAnnotations(junit);
 
   sendCheck(
-    'PHPUnit',
+    'PHPUnit check',
     'PHPUnit tests',
     conclusion,
     summary,
