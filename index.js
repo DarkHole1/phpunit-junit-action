@@ -77,7 +77,7 @@ async function sendCheck(name, title, conclusion, summary, annotations) {
 
   let batchAnnotations = annotations.slice(50);
   while(batchAnnotations.length > 0) {
-    let res = await octokit.checks.update({
+    res = await octokit.checks.update({
       ...baseData,
       output: { annotations: batchAnnotations.slice(0, 50) }
     });
