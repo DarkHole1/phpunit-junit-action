@@ -39,7 +39,14 @@ class JUnit {
   parseSuite(suite) {
     let cases = [];
     const stats = this.parseStats(suite.$);
+    for(const _case of suite.testcases) {
+      cases.push(this.parseCase(_case));
+    }
     return { cases, stats };
+  }
+
+  parseCase(_case) {
+    return _case;
   }
 }
 
