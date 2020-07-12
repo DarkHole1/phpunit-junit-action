@@ -1,4 +1,3 @@
-console.log(require('process'));
 const root = require('process').cwd();
 const core = require('@actions/core');
 const github = require('@actions/github');
@@ -7,7 +6,7 @@ const JUnit = require('./junit');
 async function main() {
   const junit = new JUnit(core.getInput('file'));
   await junit.parse();
-  junit.dropPrefixPath(cwd+'/');
+  junit.dropPrefixPath(root+'/');
 
   const conclusion = (junit.stats.failures <= 0) ? 'success' : 'failure';
   const summary = makeSummary(junit);
